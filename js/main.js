@@ -111,14 +111,16 @@ const typing = (text, textId) => {
 
 function typingFunction(textArray, idArray) {
    let i = 0;
-   typing(textArray[i], idArray[i]);
-   i++;
+   // typing(textArray[i], idArray[i]);
+   // i++;
    setInterval (function() {
-      if (i < 4) {
+      if (i < 5) {
          typing(textArray[i], idArray[i]);
 
-         document.getElementById(idArray[i]).classList.add('active-line');
-         document.getElementById(idArray[i-1]).classList.remove('active-line');
+         if (i > 0) {
+            document.getElementById(idArray[i]).classList.add('active-line');
+            document.getElementById(idArray[i-1]).classList.remove('active-line');
+         }
          i++;
       }
    }, 1200);
