@@ -1,20 +1,40 @@
 /* ---------- SCROLL REVEAL ----------*/
-function scrollReveal() {
-   var revealPoint = 250;
-   var revealElement = document.querySelectorAll(".reveal");
-   console.log(revealElement);
-   for (var i = 0; i < revealElement.length; i++) {
-      var windowHeight = window.innerHeight;
-      var revealTop = revealElement[i].getBoundingClientRect().top;
-      if (revealTop < windowHeight - revealPoint) {
-         revealElement[i].classList.add("active");
+// function scrollReveal() {
+//    var revealPoint = 250;
+//    var revealElement = document.querySelectorAll(".reveal");
+//    console.log(revealElement);
+//    for (var i = 0; i < revealElement.length; i++) {
+//       var windowHeight = window.innerHeight;
+//       var revealTop = revealElement[i].getBoundingClientRect().top;
+//       if (revealTop < windowHeight - revealPoint) {
+//          revealElement[i].classList.add("active");
+//       } else {
+//          revealElement[i].classList.remove("active");
+//       }
+//    }
+// }
+
+// window.addEventListener("scroll", scrollReveal);
+/* ---------- TOGGLE MENU ---------- */
+const toggle = document.querySelector(".toggle-menu");
+toggle.addEventListener('click', e => {
+   const toggleMenu = document.querySelectorAll('.toggle-menu span');
+   const navBox = document.getElementById('nav-menu');
+
+   if (navBox.classList.contains('active-menu')) {
+      navBox.classList.remove('active-menu');
+   } else {
+      navBox.classList.add('active-menu');
+   }
+
+   for (let i in toggleMenu) {
+      if (toggleMenu[i].classList.contains('active-menu')) {
+         toggleMenu[i].classList.remove('active-menu');
       } else {
-         revealElement[i].classList.remove("active");
+         toggleMenu[i].classList.add('active-menu');
       }
    }
-}
-
-window.addEventListener("scroll", scrollReveal);
+});
 /* ---------- CAROUSEL ---------- */
 const track = document.querySelector('.carousel__track');
 const slides = Array.from(track.children);
@@ -96,37 +116,35 @@ dotsNav.addEventListener('click', e => {
 })
 
 /* ---------- TYPING ANIMATION ----------*/
-const textArray = ["Hello,", "I'm Daniel", "and I am a", "Web\nDeveloper"];
-const idArray = ["id_01", "id_02", "id_03" ,"id_04"];
+// const textArray = ["Hello,", "I'm Daniel", "and I am a", "Web\nDeveloper"];
+// const idArray = ["id_01", "id_02", "id_03" ,"id_04"];
 
-const typing = (text, textId) => {
-   let i = 0;
-   setInterval (function() {
-      if (i < text.length) {
-         document.getElementById(textId).innerHTML += text.charAt(i);
-         i++;
-      }
-   }, 100);
-}
+// const typing = (text, textId) => {
+//    let i = 0;
+//    setInterval (function() {
+//       if (i < text.length) {
+//          document.getElementById(textId).innerHTML += text.charAt(i);
+//          i++;
+//       }
+//    }, 100);
+// }
 
-function typingFunction(textArray, idArray) {
-   let i = 0;
-   // typing(textArray[i], idArray[i]);
-   // i++;
-   setInterval (function() {
-      if (i < 5) {
-         typing(textArray[i], idArray[i]);
+// function typingFunction(textArray, idArray) {
+//    let i = 0;
+//    setInterval (function() {
+//       if (i < 5) {
+//          typing(textArray[i], idArray[i]);
 
-         if (i > 0) {
-            document.getElementById(idArray[i]).classList.add('active-line');
-            document.getElementById(idArray[i-1]).classList.remove('active-line');
-         }
-         i++;
-      }
-   }, 1200);
-}
+//          if (i > 0) {
+//             document.getElementById(idArray[i]).classList.add('active-line');
+//             document.getElementById(idArray[i-1]).classList.remove('active-line');
+//          }
+//          i++;
+//       }
+//    }, 1200);
+// }
 
-typingFunction(textArray, idArray);
+// typingFunction(textArray, idArray);
 
 
 

@@ -25,7 +25,7 @@
 		<!--=============== HOME ===============-->
 		<section class="home reveal" id="home">
 			<div class="home__container container">
-				<div class="nav-box">
+				<div class="nav-box" id="nav-menu">
 					<div class="portfolio-box">
 						<a href="#portfolio" class="box__link">Portfolio</a>
 					</div>
@@ -37,10 +37,15 @@
 					</div>
 				</div>
 				<div class="container--top content">
+					<div class="toggle-menu">
+						<span class="toggle--top toggle"></span>
+						<span class="toggle--middle"></span>
+						<span class="toggle--bottom"></span>
+					</div>
 					<div class="top--left">
-						<h3 class="first__title shadow active-line" id="id_01"><!-- Hello, --></h3>
-						<h2 class="second__title shadow" id="id_02"><!-- I'm Daniel --></h2>
-						<h3 class="third__title shadow" id="id_03"><!-- and I am a --></h3>
+						<h3 class="first__title shadow active-line" id="id_01">Hello,</h3>
+						<h2 class="second__title shadow" id="id_02">I'm Daniel</h2>
+						<h3 class="third__title shadow" id="id_03">and I am a</h3>
 					</div>
 					<div class="top--right">
 					</div>
@@ -65,10 +70,10 @@
 						</div>
 						<div class="container__row--right content">
 							<h1 class="home__title--top shadow">
-								<code id="id_04"></code>
+								<code id="id_04">Web</code>
 							</h1>
 							<h1 class="home__title--bottom shadow">
-								<code id="id_05"></code>
+								<code id="id_05">Developer</code>
 							</h1>
 						</div>
 					</div>
@@ -79,7 +84,7 @@
 		<section class="portfolio reveal" id="portfolio">
 			<div class="portfolio__container container">
 				<div class="title__container content">
-					<h2 class="portfolio__title shadow">
+					<h2 class="portfolio__title title shadow">
 						Recent Work
 					</h2>
 				</div>
@@ -91,19 +96,19 @@
 						<div class="carousel__track-container">
 							<ul class="carousel__track">
 								<li class="carousel__slide current-slide">
-									<img src="img/plants-template.png" alt="" class="template-img">
+									<img src="img/plants-mobile.png" alt="" class="template-img">
 								</li>
 								<li class="carousel__slide">
-									<img src="img/dog-food-template.png" alt="" class="template-img">
+									<img src="img/dog-food-mobile.png" alt="" class="template-img">
 								</li>
 								<li class="carousel__slide">
-									<img src="img/burger-template.png" alt="" class="template-img">
+									<img src="img/burger-mobile.png" alt="" class="template-img">
 								</li>
 								<li class="carousel__slide">
-									<img src="img/brand-template.png" alt="" class="template-img">
+									<img src="img/brand-mobile.png" alt="" class="template-img">
 								</li>
 								<li class="carousel__slide">
-									<img src="img/forest-template.png" alt="" class="template-img">
+									<img src="img/forest-mobile.png" alt="" class="template-img">
 								</li>
 							</ul>
 						</div>
@@ -124,9 +129,9 @@
 		</section>
 		<!--=============== SKILLS ===============-->
 		<section class="skills reveal" id="skills">
-			<div class="skills__container">
+			<div class="skills__container container">
 				<div class="title__container content">
-					<h2 class="skills__title shadow">
+					<h2 class="skills__title title shadow">
 						My Skills
 					</h2>	
 				</div>
@@ -156,9 +161,9 @@
 		</section>
 		<!--=============== CONTACT ===============-->
 		<section class="contact reveal" id="contact">
-			<div class="contact__container">
+			<div class="contact__container container">
 				<div class="title__container content">
-					<h2 class="contact__title shadow">
+					<h2 class="contact__title title shadow">
 						Contact Me
 					</h2>
 				</div>
@@ -176,6 +181,10 @@
 						<div class="contact__column content">
 							<i class='bx bxl-telegram social-icon shadow' ></i>
 						</div>
+						<div class="contact__column content">
+							<i class='bx bxl-instagram social-icon shadow'></i>
+						</div>
+						
 					</div>
 					<div class="contact__email">
 						<div class="text__email content">
@@ -190,14 +199,11 @@
 		</section>
 	</main>
 	<!--=============== FOOTER ===============-->
-	<footer id="footer">
+	<!-- <footer id="footer">
 		<div class="footer__container">
 			
 		</div>
-	</footer>
-	<!--=============== SCROLL REVEAL ===============-->
-	<script src="js/scrollreveal.min.js"></script>
+	</footer> -->
 	<!--=============== MAIN JS ===============-->
-	<script src="js/main.js"></script>
-</body>
+	<script src="js/main.js"></script></body>
 </html>
