@@ -116,35 +116,35 @@ dotsNav.addEventListener('click', e => {
 })
 
 /* ---------- TYPING ANIMATION ----------*/
-// const textArray = ["Hello,", "I'm Daniel", "and I am a", "Web\nDeveloper"];
-// const idArray = ["id_01", "id_02", "id_03" ,"id_04"];
+const textArray = ["Hello,", "I'm Daniel", "and I am a", "Web\nDeveloper"];
+const idArray = ["id_01", "id_02", "id_03" ,"id_04"];
 
-// const typing = (text, textId) => {
-//    let i = 0;
-//    setInterval (function() {
-//       if (i < text.length) {
-//          document.getElementById(textId).innerHTML += text.charAt(i);
-//          i++;
-//       }
-//    }, 100);
-// }
+const typing = (text, textId) => {
+   let i = 0;
+   setInterval (function() {
+      if (i < text.length) {
+         document.getElementById(textId).innerHTML += text.charAt(i);
+         i++;
+      }
+   }, 100);
+}
 
-// function typingFunction(textArray, idArray) {
-//    let i = 0;
-//    setInterval (function() {
-//       if (i < 5) {
-//          typing(textArray[i], idArray[i]);
+function typingFunction(textArray, idArray) {
+   let i = 0;
+   setInterval (function() {
+      if (i < 5) {
+         typing(textArray[i], idArray[i]);
 
-//          if (i > 0) {
-//             document.getElementById(idArray[i]).classList.add('active-line');
-//             document.getElementById(idArray[i-1]).classList.remove('active-line');
-//          }
-//          i++;
-//       }
-//    }, 1200);
-// }
+         if (i > 0) {
+            document.getElementById(idArray[i]).classList.add('active-line');
+            document.getElementById(idArray[i-1]).classList.remove('active-line');
+         }
+         i++;
+      }
+   }, 1200);
+}
 
-// typingFunction(textArray, idArray);
+typingFunction(textArray, idArray);
 
 
 
