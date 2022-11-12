@@ -1,20 +1,20 @@
 /* ---------- SCROLL REVEAL ----------*/
-// function scrollReveal() {
-//    var revealPoint = 250;
-//    var revealElement = document.querySelectorAll(".reveal");
-//    console.log(revealElement);
-//    for (var i = 0; i < revealElement.length; i++) {
-//       var windowHeight = window.innerHeight;
-//       var revealTop = revealElement[i].getBoundingClientRect().top;
-//       if (revealTop < windowHeight - revealPoint) {
-//          revealElement[i].classList.add("active");
-//       } else {
-//          revealElement[i].classList.remove("active");
-//       }
-//    }
-// }
+function scrollReveal() {
+   var revealPoint = 250;
+   var revealElement = document.querySelectorAll(".reveal");
+   console.log(revealElement);
+   for (var i = 0; i < revealElement.length; i++) {
+      var windowHeight = window.innerHeight;
+      var revealTop = revealElement[i].getBoundingClientRect().top;
+      if (revealTop < windowHeight - revealPoint) {
+         revealElement[i].classList.add("active");
+      } else {
+         revealElement[i].classList.remove("active");
+      }
+   }
+}
 
-// window.addEventListener("scroll", scrollReveal);
+window.addEventListener("scroll", scrollReveal);
 /* ---------- TOGGLE MENU ---------- */
 const toggle = document.querySelector(".toggle-menu");
 toggle.addEventListener('click', e => {
@@ -146,7 +146,20 @@ function typingFunction(textArray, idArray) {
 
 typingFunction(textArray, idArray);
 
+/* ---------- COPY ON CLICK ----------*/
+const span = document.getElementById("copyOnClick");
 
+span.onclick = function() {
+  document.execCommand("copy");
+}
+
+span.addEventListener("copy", function(event) {
+  event.preventDefault();
+  if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", span.textContent);
+    console.log(event.clipboardData.getData("text"))
+  }
+});
 
 
 
