@@ -38,6 +38,8 @@
 	cursor: pointer;
 	transition: .3s all;
 	border-radius: 100px;
+	text-decoration: none;
+
 }
 
 .navigation-elements {

@@ -45,6 +45,7 @@
 	cursor: pointer;
 	transition: .3s all;
 	border-radius: 100px;
+	text-decoration: none;
 }
 
 .navigation-elements {
@@ -159,7 +160,7 @@
 
 .arrow-down__link {
 	position: absolute;
-	bottom: 0%;
+	bottom: 5%;
 	left: 25%;
 	transform: translate(-50%, -50%);
 	text-decoration: none;
