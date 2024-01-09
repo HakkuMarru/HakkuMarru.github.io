@@ -73,7 +73,7 @@
 	grid-template-columns: 1fr 1fr;
 	background-color: #DDE6ED;
 	margin-bottom: 100px;
-	padding-top: 80px;
+	padding-top: 60px;
 }
 
 .history-left {
@@ -94,7 +94,7 @@
 .history-desc {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
-   font-size: 33px;
+	font-size: 33px;
 	color: #DDE6ED;
 	background-color: #526D82;
 	padding: 5px 10px;
@@ -133,7 +133,42 @@
 	display: none;
 }
 
-@media only screen and (max-width:431px) {
+@media only screen and (max-width:1500px) {
+	#history {
+		height: 100%;
+		padding-top: 45px;
+		margin: 0;
+	}
+
+	.history-left {
+		padding: 50px;
+	}
+
+	.history-right-img {
+		height: 100%;
+		object-fit: cover;
+	}
+
+	#footer {
+		height: 100%;
+	}
+	
+	.supporters {
+		padding: 50px 100px;
+	}
+
+	.footer {
+		padding: 20px 50px;
+	}
+}
+
+@media only screen and (max-width:1074px) {
+	.history-title {
+		font-size: 60px;
+	}
+}
+
+@media only screen and (max-width:831px) {
 
 	.wrapper {
 		width: 100vw;
@@ -174,7 +209,7 @@
 		gap: 30px;
 		transition: .3s all;
 	}
-	
+
 	.nav-el {
 		color: #DDE6ED;
 		font-size: 30px;
@@ -197,7 +232,7 @@
 		width: 100vw;
 		margin-bottom: 10px;
 	}
-	
+
 	.history-left {
 		padding: 20px;
 	}
@@ -246,7 +281,7 @@
 		width: 60vw;
 		/* margin: 0; */
 	}
-	
+
 	.footer {
 		padding: 20px;
 	}
